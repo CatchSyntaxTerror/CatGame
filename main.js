@@ -9,13 +9,14 @@ const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 600;
 const CANVAS_HEIGHT = canvas.height = 600
 
-
+const bgImage = new Image();
+bgImage.src = 'images/Background.png';
 const playerImage = new Image();
 playerImage.src = 'images/kitten.png';
 var playerSize = 32;
 var playerStretch = playerSize * 3;
 var playerX = 0;
-var playerY = 500;
+var playerY = 440;
 var gameFrames = 0;
 var staggerFrames = 8;
 var playerState = 'lick';
@@ -81,9 +82,12 @@ animationStates.forEach((state, index) => {
     spriteAnimations[state.name] = frames;
 });
 
+
+
 //Animate function draws the game 
 function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    ctx.drawImage(bgImage, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     if(playerDirection === 'right' && playerX < CANVAS_WIDTH - playerStretch) playerX += 5;
     if(playerDirection === 'left' && playerX > 0) playerX -= 5;
     let position = Math.floor(gameFrames / staggerFrames) % spriteAnimations[playerState].loc.length;
