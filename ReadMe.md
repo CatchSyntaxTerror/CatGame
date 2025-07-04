@@ -1,6 +1,6 @@
 #  Cat Game
 
-a simple browser game I created to practice JavaScript.  
+A simple browser game I created to practice JavaScript.  
 It uses **JavaScript**, **HTML**, and the **Canvas API**.
 
 The goal is to keep it easy for friends who aren’t tech-savvy—just open `index.html` and play!
