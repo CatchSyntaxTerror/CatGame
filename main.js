@@ -6,17 +6,19 @@
 
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
-const CANVAS_WIDTH = canvas.width = 600;
-const CANVAS_HEIGHT = canvas.height = 600
+canvas.width = 800;
+canvas.height = 800;
+const CANVAS_WIDTH = canvas.width = 800;
+const CANVAS_HEIGHT = canvas.height = 800;
 
 const bgImage = new Image();
 bgImage.src = 'images/Background.png';
 const playerImage = new Image();
 playerImage.src = 'images/kitten.png';
 var playerSize = 32;
-var playerStretch = playerSize * 3;
+var playerStretch = playerSize * 3.5;
 var playerX = 0;
-var playerY = 440;
+var playerY = CANVAS_HEIGHT * 3/4;
 var gameFrames = 0;
 var staggerFrames = 8;
 var playerState = 'lick';
