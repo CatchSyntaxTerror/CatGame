@@ -17,12 +17,25 @@ This ensures consistent behavior and appearance across different devices and scr
 
 ---
 
-## ✨ Features
+## ✅ Completed
+- Cat movement (⬅️ ➡️ / A D)
+- Idle + lick animations
+- Multi-canvas layout (game + side panels)
+- Responsive CSS (Flexbox)
+- Smooth sprite animation
 
-- 🕹️ Smooth sprite-based animations controlled by keyboard input  
-- 🌀 Procedural animation states: `"idle"`, `"lick"`, `"runLeft"`, `"runRight"`  
-- 📐 Responsive and centered layout using CSS Flexbox  
-- 🎞️ Background rendering and frame-based animation timing  
+## 🚧 In Progress
+- 🎣 Falling fish with scoring
+- 🧮 Score tracker in left panel
+- 🕹️ Controls guide (⬅️ ➡️ labels)
+- 🎣 Right panel: fish types + point values
+  - 🐟 Small Fish (1pt)
+  - 🐠 Medium Fish (2pt)
+  - 🐡 Pufferfish (3pt)
+  - 🦑 Squid (5pt)
+  - 🐋 Whale (10pt, rare)
+- 📈 Level scaling (faster fish, rare spawns)
+- 🎵 Music on progression
 
 ---
 
@@ -48,17 +61,6 @@ This ensures consistent behavior and appearance across different devices and scr
 
 ---
 
-## 💡 Future Improvements
-
-- 🐟 Add falling fish mechanics with various fish types and point values  
-- 🎨 Animate the background to enhance visual appeal and immersion  
-- 🧾 Display fish types and score values in the right panel  
-- 🧭 Display current score and control instructions in the left panel  
-- 🧱 Implement player-fish collision detection and scoring logic  
-- 🧍 Expand player animation states and transitions for catching actions  
-- 🔊 Add sound effects and particle animations for catches and misses  
-
----
 
 ## 👤 Author
 
