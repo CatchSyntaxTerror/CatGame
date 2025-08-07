@@ -1,5 +1,7 @@
 # 🐱 Cat Catcher
 
+![Cat Catcher Screenshot](images/CatGameSS.png)
+
 A cozy HTML5 canvas game made with JavaScript and pixel love.  
 Catch fish, dodge trash, and enjoy lively animations — all packed into a single file for max shareability.
 
