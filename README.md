@@ -1,68 +1,65 @@
-# 🐱 Cat Game
+# 🐱 Cat Catcher
 
-This project is a JavaScript-based animation built using the HTML5 Canvas API.  
-It was designed as a learning exercise in procedural animation, sprite management, and canvas layout.  
-The main feature is a cat character that responds to keyboard input and performs different animations depending on its movement and state.
+A cute HTML5 canvas game made with JavaScript and pixel love.  
+Catch fish, dodge trash, and enjoy lively animations all in one cozy file — so even your least tech-savvy friends can play!
 
 ---
 
 ## 🧵 Overview
 
-The layout includes three canvas elements:
-- 🎯 A central canvas (`canvas1`) where the main game and animation logic takes place.
-- 🧩 Two side panels (`canvas2` and `canvas3`) intended for UI elements or additional interactions.
-
-The game is displayed in a fixed-size layout, with all canvases aligned horizontally and centered on the screen.  
-This ensures consistent behavior and appearance across different devices and screen resolutions.
+This game features a multi-canvas layout:
+- 🎮 **Main canvas**: the game world with falling fish and animated cat sprite
+- 📋 **Right panel**: guide showing fish types, point values, and lives
+- 🎛️ **Left panel**: control hints, game objective, and current score
 
 ---
 
-## ✅ Completed
-- Cat movement (⬅️ ➡️ / A D)
-- Idle + lick animations
-- Multi-canvas layout (game + side panels)
-- Responsive CSS (Flexbox)
-- Smooth sprite animation
+## ✅ Features
 
-## 🚧 In Progress
-- 🎣 Falling fish with scoring
-- 🧮 Score tracker in left panel
-- 🕹️ Controls guide (⬅️ ➡️ labels)
-- 🎣 Right panel: fish types + point values
-  - 🐟 Small Fish (1pt)
-  - 🐠 Medium Fish (2pt)
-  - 🐡 Pufferfish (3pt)
-  - 🦑 Squid (5pt)
-  - 🐋 Whale (10pt, rare)
-- 📈 Level scaling (faster fish, rare spawns)
-- 🎵 Music on progression
+- 🍣 Catchable fish with point values
+- ☠️ Hazards (lures, rusty cans) that reduce lives
+- 🧮 Score and lives tracker
+- 🕹️ Keyboard movement with idle + lick animations
+- 🎨 Sprite animation system (lick, idle, run)
+- 🎛️ Dynamic UI panels rendered with canvas
+- 📈 Difficulty scaling: fish fall faster and spawn more frequently as you play
 
 ---
 
-## 🎮 Controls
+## 🕹️ Controls
 
-- ⬅️ ➡️ Arrow keys or `A` / `D` can be used to move the cat left or right.  
-- 🎲 On key release, the cat randomly selects between idle and licking animations.
-
----
-
-## 🗂️ Project Structure
-
-- `index.html`: Defines the canvas layout and links to style and script files  
-- `style.css`: Handles the styling and layout of the canvases using Flexbox  
-- `main.js`: Contains the animation loop, sprite logic, and input handling  
+- ⬅️ `ArrowLeft` → Move left  
+- ➡️ `ArrowRight` → Move right  
+- On release, the cat randomly switches between idle or licking
 
 ---
 
-## ⚙️ Setup Instructions
+## 📁 Project Structure
 
-1. 📥 Clone or download the project  
-2. 🌐 Open `index.html` in a browser to run the game (no build tools or live server required)
+- `index.html` – HTML file that links the canvas layout and scripts  
+- `main.js` – Core game loop, rendering logic, sprite and input handling  
+- `style.css` – Flexbox layout and visual styling  
+- `images/` – Folder containing all fish, cat, and UI sprites
 
 ---
 
+## 🚧 Possible Future Features
+
+- 🎵 Background music and sound effects  
+- 🏁 Start screen and Game Over screen  
+- 🐠 More fish types and hazards  
+- 💾 Score saving or local leaderboard  
+
+---
+
+## 🛠️ How to Run
+
+1. Clone or download the project  
+2. Open `index.html` in your browser — no build tools required!
+
+---
 
 ## 👤 Author
 
 **Youssef Amin**  
-> Created to practice JavaScript and HTML Canvas
+> Built to sharpen my JS and canvas skills, and sprinkle joy like confetti 🎉
