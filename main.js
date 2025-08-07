@@ -16,6 +16,11 @@ const fishSpawnInterval = 80;
 let score = 0;
 let lives = 3;
 let fallSpeed = 1;
+let gameOver = false;
+document.getElementById('play-again').addEventListener('click', () => {
+    location.reload();
+});
+
 
 // Right panel setup
 const rightCanvas = document.getElementById('canvas2');
@@ -110,6 +115,22 @@ function drawLeftPanel() {
     leftPanel.font = 'bold 50px "Comic Sans MS", cursive';
     leftPanel.fillText(`${score}`, leftCanvas.width / 3, 575);
 }
+
+// Game over 
+function drawGameOver() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+    ctx.fillStyle = '#ff004cff';
+    ctx.font = 'bold 60px "Baloo", cursive';
+    ctx.fillText('Game Over', 220, 350);
+
+    ctx.font = '40px "BalooS", cursive';
+    ctx.fillText(`Score: ${score}`, 300, 420);
+
+    document.getElementById('play-again').style.display = 'block';
+}
+
 
 // Game Assets
 const bgImage = new Image();
@@ -249,9 +270,6 @@ animationStates.forEach((state, index) => {
 function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     ctx.drawImage(bgImage, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    drawRightPanel();
-    drawLeftPanel();
-
 
     for (let i = fishArray.length - 1; i >= 0; i--) {
         const fish = fishArray[i];
@@ -273,14 +291,15 @@ function animate() {
             if (!fish.type.isHazard) {
                 score += fish.points;
                 fallSpeed += 0.05;
-                console.log('Caught:', fish.type.name, 'Score:', score);
             } else {
                 lives--;
-                console.log('Hit a hazard:', fish.type.name, 'Lives left:', lives);
+                if (lives <= 0) gameOver = true;
             }
             fishArray.splice(i, 1);
         }
     }
+    drawRightPanel();
+    drawLeftPanel();
 
     player.move();
 
@@ -298,7 +317,15 @@ function animate() {
     }
 
     gameFrames++;
-    requestAnimationFrame(animate);
+    if (!gameOver) {
+        requestAnimationFrame(animate);
+    } else {
+        drawGameOver();
+    }
+}
+
+function restartGame() {
+    location.reload();
 }
 
 const staggerFrames = 8;

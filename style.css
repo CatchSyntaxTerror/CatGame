@@ -31,3 +31,25 @@ canvas {
     width: 200px;
     height: 800px;
 }
+
+#play-again {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    padding: 12px 24px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+#play-again:hover {
+  background-color: #007acc;
+}
+
